@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 
+// Integrating Google Maps with React: https://blog.logrocket.com/integrating-google-maps-react/
+
 function App() {
   return (
     <div className='App'>
