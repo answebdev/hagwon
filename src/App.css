@@ -3,7 +3,7 @@
 :root {
   --primaryDark: #232023;
   --secondaryDark: #834d2a;
-  --primaryFontFamily: 'Karla', sans-serif;
+  /* --primaryFontFamily: 'Karla', sans-serif; */
   /* --mainTextColor: #111111; */
 }
 
@@ -22,13 +22,13 @@ html {
   box-sizing: border-box;
 }
 
-body {
-  /* Need for footer: */
-  /* position: relative;
+/* Body - Need for footer: */
+/* body {
+  position: relative;
   margin: 0;
   padding-bottom: 6rem;
-  min-height: 100%; */
-}
+  min-height: 100%;
+} */
 
 /* Need for footer (class defined in App.js) */
 /* .app-container {
