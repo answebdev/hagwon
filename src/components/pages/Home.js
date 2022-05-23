@@ -25,14 +25,14 @@ const Home = () => {
           Come learn and improve your English skills while enjoying the beauty
           and nature of Eucalyptus County Park.
         </p>
-        <br />
 
-        <hr />
+        <br />
 
         <h3>Address</h3>
         <p>9125 Edgewood Dr, La Mesa, CA 91941</p>
 
         <br />
+
         <h3>Contact</h3>
         <p>
           School: +1 (619) 123-4567
