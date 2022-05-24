@@ -35,18 +35,13 @@ const Navbar = () => (
         <div className={classes.ItemsDiv}>
           <div className={classes.Pages}>
             <li className={classes.NavbarItem}>
-              <Link className={classes.NavLink} to='/about'>
-                About
+              <Link className={classes.NavLink} to='/'>
+                Home
               </Link>
             </li>
             <li className={classes.NavbarItem}>
-              <Link className={classes.NavLink} to='/photos'>
-                Photos
-              </Link>
-            </li>
-            <li className={classes.NavbarItem}>
-              <Link className={classes.NavLink} to='/videos'>
-                Videos
+              <Link className={classes.NavLink} to='/courses'>
+                Courses
               </Link>
             </li>
             <li className={classes.NavbarItem}>

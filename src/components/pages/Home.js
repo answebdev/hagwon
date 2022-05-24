@@ -41,6 +41,9 @@ const Home = () => {
           <br />
           <Link to='/contact'>Contact Us</Link>
         </p>
+
+        <br />
+
         <Map location={location} zoomLevel={17} />
       </div>
     </div>
