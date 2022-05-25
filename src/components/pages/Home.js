@@ -5,7 +5,7 @@ import classes from '../../styles/Home.module.css';
 
 // Eucalyptus County Park
 const location = {
-  address: '9125 Edgewood Dr, La Mesa, CA 91941.',
+  address: 'ABC English, 9125 Edgewood Dr, La Mesa, CA 91941',
   lat: 32.7594958,
   lng: -117.0011385,
 };
