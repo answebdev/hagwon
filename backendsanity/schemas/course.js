@@ -1,11 +1,16 @@
 export default {
-  name: 'post',
-  title: 'Post',
+  name: 'course',
+  title: 'Course',
   type: 'document',
   fields: [
     {
       name: 'title',
       title: 'Title',
+      type: 'string',
+    },
+    {
+      name: 'code',
+      title: 'Code',
       type: 'string',
     },
     {
@@ -16,12 +21,6 @@ export default {
         source: 'title',
         maxLength: 96,
       },
-    },
-    {
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'},
     },
     {
       name: 'mainImage',
@@ -35,7 +34,7 @@ export default {
       name: 'categories',
       title: 'Categories',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
+      of: [{ type: 'reference', to: { type: 'category' } }],
     },
     {
       name: 'publishedAt',
@@ -56,10 +55,10 @@ export default {
       media: 'mainImage',
     },
     prepare(selection) {
-      const {author} = selection
+      const { author } = selection;
       return Object.assign({}, selection, {
         subtitle: author && `by ${author}`,
-      })
+      });
     },
   },
-}
+};
