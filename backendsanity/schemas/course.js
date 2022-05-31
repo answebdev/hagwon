@@ -14,6 +14,21 @@ export default {
       type: 'string',
     },
     {
+      name: 'instructor',
+      title: 'Instructor',
+      type: 'string',
+    },
+    {
+      name: 'day',
+      title: 'Day',
+      type: 'string',
+    },
+    {
+      name: 'time',
+      title: 'Time',
+      type: 'string',
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -40,6 +55,11 @@ export default {
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
+    },
+    {
+      name: 'briefDesc',
+      title: 'Brief Description',
+      type: 'blockContent',
     },
     {
       name: 'body',

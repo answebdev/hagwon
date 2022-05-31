@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useParams } from 'react-router-dom';
 import sanityClient from '../../client';
@@ -21,6 +22,9 @@ const Course = () => {
       .fetch(
         `*[slug.current == "${slug}"]{
            title,
+           instructor,
+           day,
+           time,
            slug,
            mainImage{
            asset->{
@@ -54,7 +58,7 @@ const Course = () => {
               {courseData.authorImage && (
                 <img
                   src={urlFor(courseData.authorImage).url()}
-                  alt='Author is John Doe'
+                  alt={courseData.title}
                 />
               )}
               <h4>{courseData.name}</h4>
@@ -64,14 +68,36 @@ const Course = () => {
         <img
           src={urlFor(courseData.mainImage).url()}
           alt=''
-          style={{ height: '400px' }}
+          style={{ height: '400px', marginBottom: '40px' }}
         />
         <div>
+          <p>
+            <strong>Instructor: </strong>
+            {courseData.instructor}
+          </p>
+        </div>
+        <div>
+          <p>
+            <strong>Days: </strong>
+            {courseData.day}
+          </p>
+        </div>
+        <div>
+          <p>
+            <strong>Time: </strong>
+            {courseData.time}
+          </p>
+        </div>
+        <div>
+          <strong>Course Description:</strong>
           <BlockContent
             blocks={courseData.body}
             projectId={sanityClient.clientConfig.projectId}
             dataset={sanityClient.clientConfig.dataset}
           />
+        </div>
+        <div>
+          <Link to='/courses'>Back</Link>
         </div>
       </div>
     </div>

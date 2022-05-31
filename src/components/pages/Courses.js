@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { Card } from 'react-bootstrap';
 import sanityClient from '../../client.js';
 import classes from '../../styles/Courses.module.css';
+import BlockContent from '@sanity/block-content-to-react';
 
 const Courses = () => {
   const [allCourseData, setAllCourseData] = useState(null);
@@ -15,13 +16,14 @@ const Courses = () => {
         `*[_type == "course"]{
           title,
           code,
+          briefDesc,
           slug,
           mainImage{
           asset->{
             _id,
             url
           }
-        }
+        },
       }`
       )
       .then((data) => setAllCourseData(data))
@@ -41,7 +43,7 @@ const Courses = () => {
         <div className={classes.CoursesContainer}>
           {allCourseData &&
             allCourseData.map((course, index) => (
-              <Card key={index} style={{ width: '18rem' }}>
+              <Card key={index} className={classes.CourseCard}>
                 <Card.Img
                   variant='top'
                   src={course.mainImage.asset.url}
@@ -51,6 +53,13 @@ const Courses = () => {
                   <Card.Title>{course.title}</Card.Title>
                   <Card.Text>{course.code}</Card.Text>
                   {/* <Button variant='primary'>Go somewhere</Button> */}
+                  <div>
+                    <BlockContent
+                      blocks={course.briefDesc}
+                      projectId={sanityClient.clientConfig.projectId}
+                      dataset={sanityClient.clientConfig.dataset}
+                    />
+                  </div>
                   <Link
                     to={'/courses/' + course.slug.current}
                     key={course.slug.current}
