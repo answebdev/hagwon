@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-// import Map from '../layout/Map';
-import Mapbox from '../layout/Mapbox';
+import Map from '../layout/Map';
+// import Mapbox from '../layout/Mapbox';
 import classes from '../../styles/Home.module.css';
 
 // Eucalyptus County Park
-// const location = {
-//   address: 'ABC English, 9125 Edgewood Dr, La Mesa, CA 91941',
-//   lat: 32.7594958,
-//   lng: -117.0011385,
-// };
+const location = {
+  address: 'ABC English, 9125 Edgewood Dr, La Mesa, CA 91941',
+  lat: 32.7594958,
+  lng: -117.0011385,
+};
 
 const Home = () => {
   return (
@@ -45,8 +45,8 @@ const Home = () => {
 
         <br />
 
-        {/* <Map location={location} zoomLevel={17} /> */}
-        <Mapbox />
+        <Map location={location} zoomLevel={17} />
+        {/* <Mapbox /> */}
       </div>
     </div>
   );
