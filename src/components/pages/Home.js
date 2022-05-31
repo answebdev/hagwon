@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Map from '../layout/Map';
+import Mapbox from '../layout/Mapbox';
 import classes from '../../styles/Home.module.css';
 
 // Eucalyptus County Park
@@ -44,7 +45,8 @@ const Home = () => {
 
         <br />
 
-        <Map location={location} zoomLevel={17} />
+        {/* <Map location={location} zoomLevel={17} /> */}
+        <Mapbox />
       </div>
     </div>
   );
