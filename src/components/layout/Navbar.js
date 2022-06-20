@@ -45,6 +45,11 @@ const Navbar = () => (
               </Link>
             </li>
             <li className={classes.NavbarItem}>
+              <Link className={classes.NavLink} to='/instructors'>
+                Instructors
+              </Link>
+            </li>
+            <li className={classes.NavbarItem}>
               <Link className={classes.NavLink} to='/contact'>
                 Contact
               </Link>

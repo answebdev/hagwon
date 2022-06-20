@@ -6,6 +6,8 @@ import '../../styles/mapbox.css';
 // Use Mapbox GL JS in a React app: https://docs.mapbox.com/help/tutorials/use-mapbox-gl-js-with-react/
 // Install: https://www.npmjs.com/package/mapbox-gl
 
+// See also: Getting Started With React Mapbox Gl JS: Markers => https://mounted.medium.com/getting-started-with-react-mapbox-gl-js-markers-f5cd8aabfc4e
+
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
 
 const Mapbox = () => {

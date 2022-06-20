@@ -39,6 +39,7 @@ const Courses = () => {
         <h2 className={classes.LeadTitle}>
           <strong>Courses Offered</strong>
         </h2>
+        <p>See all our English courses at our Eucalyptus County Park Center.</p>
 
         <div className={classes.CoursesContainer}>
           {allCourseData &&
@@ -47,7 +48,7 @@ const Courses = () => {
                 <Card.Img
                   variant='top'
                   src={course.mainImage.asset.url}
-                  alt=''
+                  alt={course.title}
                 />
                 <Card.Body>
                   <Card.Title>{course.title}</Card.Title>
@@ -61,6 +62,7 @@ const Courses = () => {
                     />
                   </div>
                   <Link
+                    className={classes.Button}
                     to={'/courses/' + course.slug.current}
                     key={course.slug.current}
                   >
