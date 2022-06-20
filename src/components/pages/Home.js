@@ -45,7 +45,7 @@ const Home = () => {
 
         <br />
 
-        {/* <Map location={location} zoomLevel={17} /> */}
+        <Map location={location} zoomLevel={17} />
         {/* <Mapbox /> */}
       </div>
     </div>
